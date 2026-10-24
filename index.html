@@ -10,20 +10,33 @@
     <meta name="theme-color" content="#6aa6dc" />
     <link rel="manifest" href="manifest.webmanifest" />
     <title>ボートレース試作</title>
-    <script type="module" crossorigin src="./assets/index-BB5jVOYx.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CQsOkARY.css">
+    <script type="module" crossorigin src="./assets/index-CTuk0x7U.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CbzI9ITz.css">
   </head>
   <body>
     <div id="app"></div>
     <div id="touch"></div>
     <div id="lean-pad" class="pad"><div class="knob"></div><span>体重</span></div>
     <div id="steer-pad" class="pad steer" hidden><div class="knob"></div><span>ハンドル</span></div>
+    <div id="wheel" aria-label="ハンドルの切れ角">
+      <svg viewBox="0 0 120 120">
+        <path class="w-range" d="M 6 60 A 54 54 0 0 1 114 60" />
+        <path class="w-fill" id="wheel-fill" d="M 60 6 A 54 54 0 0 1 60 6" />
+        <path class="w-tick" d="M 60 1 V 11 M 1 60 H 11 M 109 60 H 119" />
+        <g id="wheel-rot">
+          <circle class="w-ring" cx="60" cy="60" r="38" />
+          <path class="w-spoke" d="M 22 60 H 98 M 60 60 V 98" />
+          <circle class="w-hub" cx="60" cy="60" r="9" />
+          <circle class="w-mark" cx="60" cy="22" r="6" />
+        </g>
+      </svg>
+      <div id="wheel-label">0°</div>
+    </div>
     <div id="lever"><div class="track"><div class="fill"></div><div class="knob"></div></div><span>レバー</span></div>
     <div id="hud">
       <div class="speed"><span id="speed">0</span><small>km/h</small></div>
       <div class="meta" id="meta"></div>
       <div class="meters">
-        <div class="meter"><label>ハンドル</label><div class="bar center"><i id="m-steer"></i></div></div>
         <div class="meter lean"><label>体重</label><div class="lean-box"><i id="m-lean"></i></div></div>
       </div>
     </div>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="ボートレース" />
+    <meta name="theme-color" content="#6aa6dc" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <title>ボートレース試作</title>
+    <script type="module" crossorigin src="./assets/index-DvtpUHVO.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-7cD1h0IY.css">
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="touch"></div>
+    <div id="lean-pad" class="pad"><div class="knob"></div><span>体重</span></div>
+    <div id="steer-pad" class="pad steer" hidden><div class="knob"></div><span>ハンドル</span></div>
+    <div id="lever"><div class="track"><div class="fill"></div><div class="knob"></div></div><span>レバー</span></div>
+    <div id="hud">
+      <div class="speed"><span id="speed">0</span><small>km/h</small></div>
+      <div class="meta" id="meta"></div>
+      <div class="meters">
+        <div class="meter"><label>ハンドル</label><div class="bar center"><i id="m-steer"></i></div></div>
+        <div class="meter lean"><label>体重</label><div class="lean-box"><i id="m-lean"></i></div></div>
+      </div>
+    </div>
+    <div id="buttons">
+      <button id="b-cam">視点</button>
+      <button id="b-wave">波 ×1</button>
+      <button id="b-center" hidden>傾きを中央に</button>
+      <button id="b-reset">リセット</button>
+    </div>
+    <div id="banner"></div>
+    <div id="start">
+      <div class="start-card">
+        <h1>ボートレース試作</h1>
+        <ul>
+          <li><b>ハンドル</b> スマホを左右に回す（ハンドルを切るように）</li>
+          <li><b>レバー</b> 右側を上下にスライド。離しても位置はそのまま</li>
+          <li><b>体重移動</b> 左側を触って左右・前後にずらす。離すと中央</li>
+        </ul>
+        <button id="b-start">スタート</button>
+        <p id="start-note">横向きで、ハンドルを持つように構えてからスタートしてください</p>
+      </div>
+    </div>
+    <div id="rotate">横向きにするとプレイしやすくなります</div>
+  </body>
+</html>

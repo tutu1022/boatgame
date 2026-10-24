@@ -1,0 +1,9 @@
+{
+  "name": "ボートレース試作",
+  "short_name": "ボートレース",
+  "start_url": "/",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#6aa6dc",
+  "theme_color": "#6aa6dc"
+}

@@ -10,8 +10,8 @@
     <meta name="theme-color" content="#6aa6dc" />
     <link rel="manifest" href="manifest.webmanifest" />
     <title>ボートレース試作</title>
-    <script type="module" crossorigin src="./assets/index-DpzKyJ-6.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-FxCgzeGm.css">
+    <script type="module" crossorigin src="./assets/index-oq648aHe.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BaXtXyMA.css">
   </head>
   <body>
     <div id="app"></div>
@@ -37,12 +37,24 @@
       <div class="speed"><span id="speed">0</span><small>km/h</small></div>
       <div class="tach" id="tach"><div class="tach-bar"><i id="m-rpm"></i></div><span id="rpm">0</span><small>rpm</small></div>
       <div class="meta" id="meta"></div>
+      <div class="chips"><span class="chip cav" id="chip-cav">キャビ 0%</span><span class="chip vent" id="chip-vent">吸い込み 0%</span></div>
     </div>
     <div id="buttons">
       <button id="b-cam">視点</button>
       <button id="b-wave">波 ×1</button>
       <button id="b-center" hidden>傾きを中央に</button>
+      <button id="b-prop">ペラ</button>
       <button id="b-reset">リセット</button>
+    </div>
+    <div id="prop-panel" hidden>
+      <div class="pp-head"><b>プロペラ調整</b><button id="pp-close">閉じる</button></div>
+      <label for="s-diameter">直径 <output id="o-diameter"></output></label><input type="range" id="s-diameter" min="12.5" max="16" step="0.1" />
+      <label for="s-pitch">ピッチ <output id="o-pitch"></output></label><input type="range" id="s-pitch" min="20" max="28" step="0.1" />
+      <label for="s-ear">羽根の面積 <output id="o-ear"></output></label><input type="range" id="s-ear" min="0.35" max="0.75" step="0.01" />
+      <label for="s-cup">カップ <output id="o-cup"></output></label><input type="range" id="s-cup" min="0" max="1.5" step="0.05" />
+      <p class="pp-note" id="pp-note"></p>
+      <p class="pp-hint">ピッチ↑ 伸び↑ 出足↓ ／ 直径↑ 出足↑ 回転↓ ／ 面積↑ キャビりにくい・抵抗↑ ／ カップ↑ 水をつかむ・空気を吸いにくい</p>
+      <button id="pp-reset">標準に戻す</button>
     </div>
     <div id="banner"></div>
     <div id="start">

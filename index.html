@@ -10,8 +10,8 @@
     <meta name="theme-color" content="#6aa6dc" />
     <link rel="manifest" href="manifest.webmanifest" />
     <title>ボートレース試作</title>
-    <script type="module" crossorigin src="./assets/index-DFhTbZYG.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-TWDZEqAg.css">
+    <script type="module" crossorigin src="./assets/index-6ggdNzbe.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DgFgcYoi.css">
   </head>
   <body>
     <div id="app"></div>
@@ -74,7 +74,14 @@
           <li><b>レバー</b> 左側を上下にスライド。離しても位置はそのまま</li>
           <li><b>体重移動</b> 右側を触って左右・前後にずらす。離すと中央</li>
         </ul>
-        <div class="start-btns"><button id="b-start">スタート</button><button id="b-watch">CPUレースを見る</button></div>
+        <div class="start-btns"><button id="b-start">ひとりで走る</button><button id="b-watch">CPUレースを見る</button><button id="b-venue">場内に入る</button></div>
+        <div class="match">
+          <b class="match-title">ローカルマッチ（CPU 5艇と 3周）</b>
+          <div class="lane-pick" id="lane-pick">
+            <button data-lane="0" class="on any">おまかせ</button><button data-lane="1" class="l1">1</button><button data-lane="2" class="l2">2</button><button data-lane="3" class="l3">3</button><button data-lane="4" class="l4">4</button><button data-lane="5" class="l5">5</button><button data-lane="6" class="l6">6</button>
+          </div>
+          <button id="b-match">レースに出る</button>
+        </div>
         <p id="start-note">横向きで、ハンドルを持つように構えてからスタートしてください</p>
       </div>
     </div>

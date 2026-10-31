@@ -10,8 +10,8 @@
     <meta name="theme-color" content="#6aa6dc" />
     <link rel="manifest" href="manifest.webmanifest" />
     <title>ボートレース試作</title>
-    <script type="module" crossorigin src="./assets/index-BR0tUp2N.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DQelfoA9.css">
+    <script type="module" crossorigin src="./assets/index-BsDc9Ch0.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CLDCbte7.css">
   </head>
   <body>
     <div id="app"></div>
@@ -48,14 +48,17 @@
     </div>
     <div id="prop-panel" hidden>
       <div class="pp-head"><b>セッティング</b><button id="pp-close">閉じる</button></div>
+      <div class="pp-group">
       <div class="tilt-row"><span>チルト角</span><button id="tilt-dn" aria-label="チルトを下げる">−</button><output id="o-tilt">0.0°</output><button id="tilt-up" aria-label="チルトを上げる">＋</button></div>
       <p class="pp-hint" id="tilt-note">＋で船首が上がり伸びる・曲がりにくい ／ −で船首が下がり水をつかむ</p>
       <div class="tilt-row"><span>モーターの高さ</span><button id="mh-dn" aria-label="モーターを下げる">−</button><output id="o-mh">±0 cm</output><button id="mh-up" aria-label="モーターを上げる">＋</button></div>
       <p class="pp-hint" id="mh-note">＋で上げる：プレートやギアケースの抵抗が減って伸びるが、空気を吸いやすい（試験用。実際の規定で動かせるかは未確認）</p>
       <div class="tilt-row"><span>操作の割り当て</span><button id="ctrlswap" aria-label="体重とハンドルの操作を入れ替える" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">標準</button></div>
-      <div class="tilt-row"><span>旋回の物理</span><button id="tphys" aria-label="旋回の物理を切り替える" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">従来</button></div>
+      <div class="tilt-row"><span>旋回の物理（自由練習）</span><button id="tphys" aria-label="旋回の物理を切り替える" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">従来</button></div>
       <div class="tilt-row"><span>水面の反射・透過</span><button id="wfx" aria-label="水面の反射と透過を切り替える" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">オン</button></div>
       <p class="pp-hint">重いときはオフ（空の色だけ映る、前の水面）</p>
+      </div>
+      <div class="pp-group">
       <b class="pp-sec">プロペラ</b>
       <label for="s-diameter">直径 <output id="o-diameter"></output></label><input type="range" id="s-diameter" min="12.5" max="16" step="0.1" />
       <label for="s-pitch">ピッチ <output id="o-pitch"></output></label><input type="range" id="s-pitch" min="20" max="28" step="0.1" />
@@ -64,32 +67,9 @@
       <p class="pp-note" id="pp-note"></p>
       <p class="pp-hint">ピッチ↑ 伸び↑ 出足↓ ／ 直径↑ 出足↑ 回転↓ ／ 面積↑ キャビりにくい・抵抗↑ ／ カップ↑ 水をつかむ・空気を吸いにくい</p>
       <button id="pp-reset">標準に戻す</button>
-    </div>
-    <div id="banner"></div>
-    <div id="start">
-      <div class="start-card">
-        <h1>ボートレース試作</h1>
-        <ul>
-          <li><b>ハンドル</b> スマホを左右に回す（ハンドルを切るように）</li>
-          <li><b>レバー</b> 左側を上下にスライド。離しても位置はそのまま</li>
-          <li><b>体重移動</b> 右側を触って左右・前後にずらす。離すと中央</li>
-        </ul>
-        <div class="start-btns"><button id="b-start">ひとりで走る</button><button id="b-watch">CPUレースを見る</button><button id="b-venue">場内に入る</button></div>
-        <div class="match">
-          <b class="match-title">ローカルマッチ（CPU 5艇と 3周）</b>
-          <div class="lane-pick" id="lane-pick">
-            <button data-lane="0" class="on any">おまかせ</button><button data-lane="1" class="l1">1</button><button data-lane="2" class="l2">2</button><button data-lane="3" class="l3">3</button><button data-lane="4" class="l4">4</button><button data-lane="5" class="l5">5</button><button data-lane="6" class="l6">6</button>
-          </div>
-          <button id="b-match">レースに出る</button>
-        </div>
-        <div class="online">
-          <b class="match-title">フレンド対戦（オンライン・最大6人、空きは CPU）</b>
-          <div class="online-row"><input id="on-name" maxlength="10" placeholder="なまえ" autocomplete="off" /><button id="b-host">部屋を作る</button></div>
-          <div class="online-row"><input id="on-code" maxlength="4" placeholder="コード" autocomplete="off" autocapitalize="characters" /><button id="b-join" class="sub">部屋に入る</button></div>
-        </div>
-        <p id="start-note">横向きで、ハンドルを持つように構えてからスタートしてください</p>
       </div>
     </div>
+    <div id="banner"></div>
     <div id="rotate">横向きにするとプレイしやすくなります</div>
   </body>
 </html>

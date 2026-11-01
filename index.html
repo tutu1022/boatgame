@@ -10,7 +10,7 @@
     <meta name="theme-color" content="#6aa6dc" />
     <link rel="manifest" href="manifest.webmanifest" />
     <title>ボートレース試作</title>
-    <script type="module" crossorigin src="./assets/index-uBHKTVfD.js"></script>
+    <script type="module" crossorigin src="./assets/index-CVCSxSAz.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-Bj_3SdsH.css">
   </head>
   <body>
@@ -50,7 +50,7 @@
       <div class="pp-head"><b>セッティング</b><button id="pp-close">閉じる</button></div>
       <div class="pp-group">
       <div class="tilt-row"><span>チルト角</span><button id="tilt-dn" aria-label="チルトを下げる">−</button><output id="o-tilt">0.0°</output><button id="tilt-up" aria-label="チルトを上げる">＋</button></div>
-      <p class="pp-hint" id="tilt-note">＋で船首が上がり伸びる・曲がりにくい ／ −で船首が下がり水をつかむ</p>
+      <p class="pp-hint" id="tilt-note">＋で伸びるが出足が弱い ／ −で出足が強く水をつかむ</p>
       <div class="tilt-row"><span>操作の割り当て</span><button id="ctrlswap" aria-label="体重とハンドルの操作を入れ替える" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">標準</button></div>
       <div class="tilt-row"><span>ハンドルの切れ角</span><button id="tsteer" aria-label="ハンドルの切れ角を切り替える" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">29°</button></div>
       <p class="pp-hint">新しい物理だけ。35° は試験用（実艇の止めの角度は未確認）</p>
@@ -59,12 +59,11 @@
       </div>
       <div class="pp-group">
       <b class="pp-sec">プロペラ</b>
-      <label for="s-diameter">直径 <output id="o-diameter"></output></label><input type="range" id="s-diameter" min="12.5" max="16" step="0.1" />
-      <label for="s-pitch">ピッチ <output id="o-pitch"></output></label><input type="range" id="s-pitch" min="20" max="28" step="0.1" />
-      <label for="s-ear">羽根の面積 <output id="o-ear"></output></label><input type="range" id="s-ear" min="0.35" max="0.75" step="0.01" />
+      <label for="s-diameter">直径 <output id="o-diameter"></output></label><input type="range" id="s-diameter" min="17" max="20" step="0.1" />
+      <label for="s-ear">羽根の面積 <output id="o-ear"></output></label><input type="range" id="s-ear" min="0.25" max="0.6" step="0.01" />
       <label for="s-cup">カップ <output id="o-cup"></output></label><input type="range" id="s-cup" min="0" max="1.5" step="0.05" />
       <p class="pp-note" id="pp-note"></p>
-      <p class="pp-hint">ピッチ↑ 伸び↑ 出足↓ ／ 直径↑ 出足↑ 回転↓ ／ 面積↑ キャビりにくい・抵抗↑ ／ カップ↑ 水をつかむ・空気を吸いにくい</p>
+      <p class="pp-hint">直径↑ 出足↑ 回転↓ ／ 面積↑ キャビりにくい・抵抗↑ ／ カップ↑ 水をつかむ・空気を吸いにくい</p>
       <button id="pp-reset">標準に戻す</button>
       </div>
     </div>

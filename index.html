@@ -10,7 +10,7 @@
     <meta name="theme-color" content="#6aa6dc" />
     <link rel="manifest" href="manifest.webmanifest" />
     <title>ボートレース試作</title>
-    <script type="module" crossorigin src="./assets/index-By9OzDL1.js"></script>
+    <script type="module" crossorigin src="./assets/index-HuB2iGDd.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-DUbnI8ef.css">
   </head>
   <body>
@@ -73,6 +73,11 @@
       <p class="pp-note" id="pp-note"></p>
       <p class="pp-hint">直径↑ 出足↑ 回転↓ ／ 面積↑ キャビりにくい・抵抗↑ ／ カップ↑ 水をつかむ・空気を吸いにくい</p>
       <button id="pp-reset">標準に戻す</button>
+      </div>
+      <div class="pp-group">
+      <b class="pp-sec">勝ったレースの記録</b>
+      <div class="tilt-row"><span id="wl-count">0 本</span><button id="wl-export" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">書き出す</button><button id="wl-clear" style="width: auto; min-width: 3.5em; padding: 0 0.8em; white-space: nowrap">消す</button></div>
+      <p class="pp-hint" id="wl-note">CPU 対戦で 1 着になったレースの 6 艇の動きを、この端末の中に貯めます（CPU の調整用。送信はしません）。「書き出す」で 1 つのファイルにまとめます</p>
       </div>
     </div>
     <div id="banner"></div>

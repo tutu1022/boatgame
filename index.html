@@ -10,7 +10,7 @@
     <meta name="theme-color" content="#6aa6dc" />
     <link rel="manifest" href="manifest.webmanifest" />
     <title>ボートレース試作</title>
-    <script type="module" crossorigin src="./assets/index-BD3fzSCy.js"></script>
+    <script type="module" crossorigin src="./assets/index-DqJxSlDr.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-DUbnI8ef.css">
   </head>
   <body>
@@ -75,9 +75,11 @@
       <button id="pp-reset">標準に戻す</button>
       </div>
       <div class="pp-group">
-      <b class="pp-sec">勝ったレースの記録</b>
+      <b class="pp-sec">計測・勝ったレースの記録</b>
+      <div class="tilt-row"><span>計測</span><button id="tmeasure" aria-label="計測のオンとオフを切り替える" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">オフ</button></div>
+      <p class="pp-hint">勝ったレースの記録（下）と、画面左上の重さの表示（fps など）。重いので標準はオフ。記録は次のレースから効く。URL に ?perf を付けたときはいつもオン</p>
       <div class="tilt-row"><span id="wl-count">0 本</span><button id="wl-export" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">書き出す</button><button id="wl-clear" style="width: auto; min-width: 3.5em; padding: 0 0.8em; white-space: nowrap">消す</button></div>
-      <p class="pp-hint" id="wl-note">CPU 対戦で 1 着になったレースの 6 艇の動きを、この端末の中に貯めます（CPU の調整用。送信はしません）。「書き出す」で 1 つのファイルにまとめます</p>
+      <p class="pp-hint" id="wl-note">計測がオンのとき、CPU 対戦で 1 着になったレースの 6 艇の動きを、この端末の中に貯めます（CPU の調整用。送信はしません）。「書き出す」で 1 つのファイルにまとめます</p>
       </div>
     </div>
     <div id="banner"></div>

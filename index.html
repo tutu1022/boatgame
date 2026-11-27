@@ -9,9 +9,9 @@
     <meta name="apple-mobile-web-app-title" content="ボートレース" />
     <meta name="theme-color" content="#6aa6dc" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <title>ボートレース試作</title>
-    <script type="module" crossorigin src="./assets/index-xaA1bKFS.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-3HObzfK4.css">
+    <title>ボートレース水都</title>
+    <script type="module" crossorigin src="./assets/index-CrFDknBL.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-D-TnQLck.css">
   </head>
   <body>
     <div id="app"></div>
@@ -46,58 +46,8 @@
       <button id="b-prop">セッティング</button>
       <button id="b-reset">リセット</button>
     </div>
-    <div id="prop-panel" hidden>
-      <div class="pp-head"><b>セッティング</b><button id="pp-close">閉じる</button></div>
-      <div class="pp-group">
-      <div class="tilt-row"><span>チルト角</span><button id="tilt-dn" aria-label="チルトを下げる">−</button><output id="o-tilt">0.0°</output><button id="tilt-up" aria-label="チルトを上げる">＋</button></div>
-      <p class="pp-hint" id="tilt-note">＋で伸びるが出足が弱い ／ −で出足が強く水をつかむ</p>
-      <div class="tilt-row"><span>操作の割り当て</span><button id="ctrlswap" aria-label="体重とハンドルの操作を入れ替える" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">標準</button></div>
-      <div class="tilt-row"><span>音量</span><button id="tvol" aria-label="音量を切り替える" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">中</button></div>
-      <div class="tilt-row"><span>曲の音量</span><button id="tmusic" aria-label="曲の音量を切り替える" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">中</button></div>
-      <p class="pp-hint">音量 = 全体（効果音・環境音・曲）。曲はメニューだけで流れる</p>      </div>
-      <div class="pp-group">
-      <b class="pp-sec">グラフィック</b>
-      <div class="tilt-row"><span>画質</span><button id="g-preset" aria-label="画質のプリセットを切り替える（標準・軽い・最低）" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">標準</button></div>
-      <p class="pp-hint">標準 → 軽い → 最低。最低はいちばん軽い描き方（スマホが熱くなってカクつくとき用）。下の項目で 1 つずつ変えられる</p>
-      <div class="tilt-row"><span>フレームレート</span><button id="g-fps" aria-label="フレームレートの上限を切り替える（60・30）" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">60</button></div>
-      <p class="pp-hint">30 にすると描く量が半分になり、熱くなりにくい（動きは少し粗くなる）</p>
-      <div class="tilt-row"><span>解像度の自動調整</span><button id="g-autores" aria-label="解像度の自動調整を切り替える" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">オフ</button></div>
-      <p class="pp-hint">オンにすると、重いとき（スマホが熱くなったときなど）だけ少しずつ解像度を下げ、余裕が戻ったら上げる</p>
-      <div class="tilt-row"><span>解像度</span><button id="g-res" aria-label="解像度を切り替える" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">標準</button></div>
-      <div class="tilt-row"><span>高画質の水面</span><button id="wfx" aria-label="高画質の水面（毎フレームの反射と透過）を切り替える" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">オフ</button></div>
-      <p class="pp-hint">オンで艇の映り込みと水の中まで描く（重い）。オフでも景色は映る</p>
-      <div class="tilt-row"><span>水面の細かさ</span><button id="g-detail" aria-label="水面の細かさを切り替える" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">高</button></div>
-      <div class="tilt-row"><span>水面の艇の映り込み</span><button id="g-boatfx" aria-label="水面の艇の映り込みと影を切り替える" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">オン</button></div>
-      <div class="tilt-row"><span>建物の影・軒下</span><button id="g-bshadow" aria-label="建物の影と軒下の暗がりを切り替える" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">オン</button></div>
-      <div class="tilt-row"><span>艇の影</span><button id="g-shadow" aria-label="艇の影を切り替える" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">オン</button></div>
-      <div class="tilt-row"><span>しぶきの量</span><button id="g-spray" aria-label="しぶきの量を切り替える" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">標準</button></div>
-      <div class="tilt-row"><span>雲</span><button id="g-clouds" aria-label="雲を切り替える" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">オン</button></div>
-      <div class="tilt-row"><span>画面の端を暗く</span><button id="g-vig" aria-label="画面の端を暗くするのを切り替える" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">オン</button></div>
-      <p class="pp-hint">重いときに効く順: 解像度 → 水面の細かさ → 水面の艇の映り込み → 建物の影・軒下。どれも変えるとすぐ効く</p>
-      <button id="g-reset">標準に戻す</button>
-      </div>
-      <div class="pp-group">
-      <b class="pp-sec">プロペラ</b>
-      <label for="s-diameter">直径 <output id="o-diameter"></output></label><input type="range" id="s-diameter" min="17" max="20" step="0.1" />
-      <label for="s-ear">羽根の面積 <output id="o-ear"></output></label><input type="range" id="s-ear" min="0.25" max="0.6" step="0.01" />
-      <label for="s-cup">カップ <output id="o-cup"></output></label><input type="range" id="s-cup" min="0" max="1.5" step="0.05" />
-      <p class="pp-note" id="pp-note"></p>
-      <p class="pp-hint">直径↑ 出足↑ 回転↓ ／ 面積↑ キャビりにくい・抵抗↑ ／ カップ↑ 水をつかむ・空気を吸いにくい</p>
-      <button id="pp-reset">標準に戻す</button>
-      </div>
-      <div class="pp-group">
-      <b class="pp-sec">計測・勝ったレースの記録</b>
-      <div class="tilt-row"><span>計測</span><button id="tmeasure" aria-label="計測のオンとオフを切り替える" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">オフ</button></div>
-      <p class="pp-hint">勝ったレースの記録（下）と、画面左上の重さの表示（fps など）。重いので標準はオフ。記録は次のレースから効く。URL に ?perf を付けたときはいつもオン</p>
-      <div class="tilt-row"><span id="wl-count">0 本</span><button id="wl-export" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">書き出す</button><button id="wl-clear" style="width: auto; min-width: 3.5em; padding: 0 0.8em; white-space: nowrap">消す</button></div>
-      <p class="pp-hint" id="wl-note">計測がオンのとき、CPU 対戦で 1 着になったレースの 6 艇の動きを、この端末の中に貯めます（CPU の調整用。送信はしません）。「書き出す」で 1 つのファイルにまとめます</p>
-      </div>
-      <div class="pp-group">
-      <b class="pp-sec">サブスク（試し）</b>
-      <div class="tilt-row"><span>サブスク</span><button id="tsub" aria-label="サブスクを試しに切り替える" style="width: auto; min-width: 4.5em; padding: 0 0.8em; white-space: nowrap">オフ</button></div>
-      <p class="pp-hint">課金はまだありません。グレードレース（G3 以上）の節に出られるかを試すための仮のスイッチです（お金はかかりません）</p>
-      </div>
-    </div>
+    <!-- セッティングの画面（中身は src/settings.ts が作る。メニューの中に置く・走る画面の右上に浮かべる） -->
+    <div id="prop-panel" hidden></div>
     <div id="banner"></div>
     <div id="rotate">横向きにするとプレイしやすくなります</div>
   </body>

@@ -1,7 +1,8 @@
 {
-  "name": "ボートレース試作",
+  "name": "ボートレース水都",
   "short_name": "ボートレース",
-  "start_url": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "fullscreen",
   "orientation": "landscape",
   "background_color": "#6aa6dc",

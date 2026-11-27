@@ -1,0 +1,17 @@
+:root{color-scheme:light;--ink:#14252c;--muted:#4d636c;--line:#ccd8da;--accent:#006575}
+*{box-sizing:border-box}body{margin:0;background:#f5f8f7;color:var(--ink);font-family:"Yu Gothic","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;line-height:1.6}
+main{max-width:960px;margin:auto;padding:28px clamp(16px,4vw,42px) 56px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.back,button{color:var(--accent);font:inherit}.back{font-size:.9rem}
+h1{font-size:clamp(1.7rem,4vw,2.4rem);margin:.35em 0}h2{margin:1.1em 0 .45em;font-size:1.35rem}h3{margin:1.3em 0 .4em;font-size:1.05rem}
+p{color:var(--muted);margin:.35em 0 .9em}label{display:flex;align-items:center;gap:8px;white-space:nowrap;font-size:.9rem}
+select,button{border:1px solid #9aafb3;background:white;border-radius:3px;padding:6px 10px}button{font-weight:650;cursor:pointer}button[aria-current=true]{background:var(--accent);color:white;border-color:var(--accent)}
+.scroll{overflow:auto;border:1px solid var(--line);border-radius:4px;background:white}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:.92rem}
+th,td{padding:7px 10px;text-align:right;white-space:nowrap;border-bottom:1px solid #e2e9e8}
+th:first-child,td:first-child{text-align:left}th{background:#eaf0ef;font-weight:650}
+tr:last-child td{border-bottom:0}td:last-child:has(details){text-align:left;white-space:normal;min-width:210px}
+details summary{color:var(--accent);cursor:pointer}details ul{margin:6px 0 0;padding-left:1.3em}
+#detail{scroll-margin-top:12px}#history{margin-top:24px;font-size:.87rem}
+#contender{max-width:min(60vw,360px)}#download{color:var(--accent)}select,button{min-height:40px}
+@media(max-width:560px){main{padding:16px 12px 38px}th,td{padding:6px 8px}h1{font-size:1.65rem}}
